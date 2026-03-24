@@ -1,0 +1,62 @@
+{
+  // =====================
+  // Python 基本設定  パス
+  //!!これは拡張機能が入ってないから入れる必要あり
+  // =====================
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+  // =====================
+  // フォーマッター: Black（VSCode 拡張機能）！！
+  // =====================
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "black-formatter.args": [
+    "--line-length=88"
+  ],
+
+  // =====================
+  // リンター: Ruff（VSCode 拡張機能）！！
+  //  // =====================
+  "ruff.enable": true,
+  "ruff.lint.enable": true,
+  "ruff.lint.args": [
+    "--select=E,F,W,I,N,UP,B,C4,SIM"
+  ],
+  "ruff.organizeImports": true,
+
+  // =====================
+  // 型チェック: Pylance (typeCheckingMode: standard)
+  // =====================
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+
+  // =====================
+  // エディター全般
+  // =====================
+  "editor.rulers": [88],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // =====================
+  // テスト: pytest
+  // =====================
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": ["tests"]
+}
