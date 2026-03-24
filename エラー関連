@@ -1,0 +1,24 @@
+Claude Codeを使用していたら以下のようなエラーメッセージが表示されました。
+
+API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token.
+
+このエラーは認証関連のエラーです。
+
+Claude Code を起動した状態で、/loginを実行します。
+追加・修正を実施しますか？
+
+  Git Claude/
+  ├── src/
+  │   └── myproject/
+  │       ├── __init__.py   # バージョン情報
+  │       └── main.py       # サンプル実装
+  ├── tests/
+  │   ├── __init__.py
+  │   └── test_main.py      # pytestテスト
+  ├── docs/
+  │   └── index.md          # APIドキュメント
+  ├── setup.py              # パッケージ設定
+  ├── requirements.txt      # 依存パッケージ
+  ├── README.md             # プロジェクト説明
+  └── .gitignore            # Git除外設定
+
